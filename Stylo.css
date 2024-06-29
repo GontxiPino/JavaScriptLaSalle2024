@@ -5,26 +5,24 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background-color: #aae2e25d;
+    background-color: #98D4DC;
     margin: 1.3em;
     padding: 0;
     width: 50%;
-    
-
 }
+
 nav {
-    background-color: #ced682;
+    background-color: #F5859D;
     text-align: center;
     padding: 1rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    box-shadow: 0 2px 5px rgb(249, 244, 244);
+    box-shadow: #F5859D;
     border-radius: 10px;
     border: 1px solid #101105;
     width: 50%;
@@ -52,15 +50,15 @@ nav ul li:last-child {
 
 
 a {
-    color: #333;
+    color:darkred;
     text-decoration: none;
 }
 .JAVASCRIPT { 
-    color: #333;
+    color: #FAC2CE;
     text-decoration: none;
-
-
 }
+
+
 
 
 
