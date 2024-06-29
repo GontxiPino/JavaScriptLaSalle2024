@@ -1,61 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
     background-color: #98D4DC;
-    margin: 1.3em;
-    padding: 0;
-    width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 800px;
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav {
     background-color: #F5859D;
     text-align: center;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    box-shadow: #F5859D;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 10px;
     border: 1px solid #101105;
-    width: 50%;
+    width: auto;
     position: relative;
     top: 0;
     z-index: 1000;
-    }
+}
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px; /* Ajusta el espacio entre elementos de menú según sea necesario */
+    margin: 0 1rem;
 }
 
-nav ul li:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento */
+article {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+article h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #F5859D;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
 
 a {
     color:darkred;
     text-decoration: none;
 }
-.JAVASCRIPT { 
-    color: #FAC2CE;
+
+nav ul li:hover {
+    background-color: #FFA6C1; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 5px;
+}
+
+#JAVASCRIPT { 
+    color:black;
     text-decoration: none;
+}
+
+.resaltado {
+    color: rgb(152, 0, 81);
+    font-weight: bolder;
 }
 
 
