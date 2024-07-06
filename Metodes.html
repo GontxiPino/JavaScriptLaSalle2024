@@ -1,16 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Stylo.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylo.css" />
     <title>Metodes</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="metodes.js"></script>
     <a href="Apuntes.html">Volver a los apuntes</a>
 
-    
-    
-</body>
+    <p
+      class="codepen"
+      data-height="300"
+      data-theme-id="dark"
+      data-default-tab="js"
+      data-slug-hash="vYqBwZG"
+      data-pen-title="Metodos"
+      data-user="GontxiPino"
+      style="
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;
+      "
+    >
+      <span
+        >See the Pen
+        <a href="https://codepen.io/GontxiPino/pen/vYqBwZG"> Metodos</a> by
+        Gonzalo Alfonso Pino Saavedra (<a href="https://codepen.io/GontxiPino"
+          >@GontxiPino</a
+        >) on <a href="https://codepen.io">CodePen</a>.</span
+      >
+    </p>
+    <script
+      async
+      src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+    ></script>
+
+    <br />
+    <h1>Apuntes de JavaScript Strings</h1>
+
+    <h2>Definición</h2>
+    <p>
+      <strong>String:</strong> Una secuencia de caracteres usados para
+      representar texto.
+      <br />
+      <strong>Sintaxis:</strong> Se pueden definir usando comillas simples
+      (<code>' '</code>) o dobles (<code>" "</code>), y a partir de ES6, también
+      con backticks (<code>` `</code>) para templates literals.
+    </p>
+
+    <h2>Propiedades</h2>
+    <ul>
+      <li>
+        <strong>length:</strong> Retorna la longitud del string.
+        <pre><code>let str = "Hello, World!";<br>console.log(str.length); // 13</code></pre>
+      </li>
+    </ul>
+
+    <h2>Métodos Principales</h2>
+    <ul>
+      <li>
+        <strong>charAt(index):</strong> Devuelve el carácter en el índice
+        especificado.
+        <pre><code class="codigo-ejemplo">console.log(str.charAt(0)); // "H"</code></pre>
+      </li>
+      <li>
+        <strong>charCodeAt(index):</strong> Devuelve el valor Unicode del
+        carácter en el índice especificado.
+        <pre><code>console.log(str.charCodeAt(0)); // 72</code></pre>
+      </li>
+      <li>
+        <strong>concat(str1, str2, ...):</strong> Combina dos o más cadenas de
+        texto y devuelve una nueva cadena.
+        <pre><code>let str1 = "Hello";<br>let str2 = "World";<br>console.log(str1.concat(", ", str2)); // "Hello, World"</code></pre>
+      </li>
+      <li>
+        <strong>includes(substring, start):</strong> Comprueba si una cadena
+        contiene otra cadena.
+        <pre><code>console.log(str.includes("World")); // true</code></pre>
+      </li>
+      <li>
+        <strong>indexOf(substring, start):</strong> Devuelve el índice de la
+        primera aparición de una subcadena.
+        <pre><code>console.log(str.indexOf("World")); // 7</code></pre>
+      </li>
+      <li>
+        <strong>lastIndexOf(substring, start):</strong> Devuelve el índice de la
+        última aparición de una subcadena.
+        <pre><code>console.log(str.lastIndexOf("o")); // 8</code></pre>
+      </li>
+      <li>
+        <strong>match(regex):</strong> Devuelve un array con las coincidencias
+        encontradas en la cadena.
+        <pre><code>console.log(str.match(/l/g)); // ["l", "l", "l"]</code></pre>
+      </li>
+      <li>
+        <strong>replace(searchValue, newValue):</strong> Reemplaza coincidencias
+        de una cadena con otra cadena.
+        <pre><code>console.log(str.replace("World", "Universe")); // "Hello, Universe!"</code></pre>
+      </li>
+      <li>
+        <strong>search(regex):</strong> Busca una coincidencia entre una
+        expresión regular y la cadena.
+        <pre><code>console.log(str.search("World")); // 7</code></pre>
+      </li>
+      <li>
+        <strong>slice(start, end):</strong> Extrae una sección de una cadena y
+        devuelve una nueva cadena.
+        <pre><code>console.log(str.slice(0, 5)); // "Hello"</code></pre>
+      </li>
+      <li>
+        <strong>split(separator, limit):</strong> Divide una cadena en un array
+        de subcadenas.
+        <pre><code>console.log(str.split(" ")); // ["Hello,", "World!"]</code></pre>
+      </li>
+      <li>
+        <strong>substring(start, end):</strong> Devuelve una parte de la cadena
+        entre los índices especificados.
+        <pre><code>console.log(str.substring(0, 5)); // "Hello"</code></pre>
+      </li>
+      <li>
+        <strong>toLowerCase():</strong> Convierte toda la cadena a minúsculas.
+        <pre><code>console.log(str.toLowerCase()); // "hello, world!"</code></pre>
+      </li>
+      <li>
+        <strong>toUpperCase():</strong> Convierte toda la cadena a mayúsculas.
+        <pre><code>console.log(str.toUpperCase()); // "HELLO, WORLD!"</code></pre>
+      </li>
+      <li>
+        <strong>trim():</strong> Elimina los espacios en blanco de ambos
+        extremos de una cadena.
+        <pre><code>let strWithSpaces = "   Hello, World!   ";<br>console.log(strWithSpaces.trim()); // "Hello, World!"</code></pre>
+      </li>
+    </ul>
+
+    <h2>Ejemplo Completo</h2>
+    <pre
+      class="codigo-ejemplo"
+    ><code>let greeting = " Hello, JavaScript! ";<br><br>console.log(greeting.length); // 20<br>console.log(greeting.charAt(1)); // "H"<br>console.log(greeting.includes("JavaScript")); // true<br>console.log(greeting.indexOf("JavaScript")); // 8<br>console.log(greeting.replace("JavaScript", "World")); // " Hello, World! "<br>console.log(greeting.slice(1, 6)); // "Hello"<br>console.log(greeting.split(" ")); // ["", "Hello,", "JavaScript!"]<br>console.log(greeting.toLowerCase()); // " hello, javascript! "<br>console.log(greeting.toUpperCase()); // " HELLO, JAVASCRIPT! "<br>console.log(greeting.trim()); // "Hello, JavaScript!"</code></pre>
+  </body>
 </html>

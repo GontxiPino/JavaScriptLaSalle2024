@@ -92,6 +92,11 @@ nav ul li:hover {
 }
 
 
-
+code {
+    background-color: #333; /* Gris oscuro */
+    color: #fff; /* Blanco */
+    padding: 10px; /* Espaciado interno para que no esté pegado a los bordes */
+    border-radius: 5px; /* Bordes redondeados para un aspecto moderno */
+}
 
 

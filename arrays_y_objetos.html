@@ -10,12 +10,123 @@
     <script src="arrays_y_objetos.js"></script>
     <a href="Apuntes.html">Volver a los apuntes</a>
 
+    
+
+    <h1>Apuntes de Arrays y Objetos en JavaScript</h1>
+
+    <h2>Arrays</h2>
+
+    <h3>Definición</h3>
+    <p>
+        Un array es una colección de elementos ordenados que pueden ser de cualquier tipo de datos.
+    </p>
+
+    <h3>Declaración y Creación</h3>
+    <ul>
+        <li>
+            Declaración de un array:
+            <pre><code>let frutas = ["Manzana", "Banana", "Cereza"];</code></pre>
+        </li>
+        <li>
+            Declaración de un array vacío:
+            <pre><code>let numeros = [];</code></pre>
+        </li>
+    </ul>
+
+    <h3>Acceso a Elementos</h3>
+    <p>
+        Se accede a los elementos de un array mediante su índice (comenzando desde 0).
+    </p>
+    <pre><code>let primeraFruta = frutas[0]; // "Manzana"</code></pre>
+
+    <h3>Propiedades y Métodos Comunes</h3>
+    <ul>
+        <li>
+            <strong>length:</strong> Retorna el número de elementos en el array.
+            <pre><code>console.log(frutas.length); // 3</code></pre>
+        </li>
+        <li>
+            <strong>push(elemento):</strong> Agrega un elemento al final del array.
+            <pre><code>frutas.push("Durazno"); // ["Manzana", "Banana", "Cereza", "Durazno"]</code></pre>
+        </li>
+        <li>
+            <strong>pop():</strong> Elimina el último elemento del array.
+            <pre><code>let ultimaFruta = frutas.pop(); // "Durazno"</code></pre>
+        </li>
+        <li>
+            <strong>shift():</strong> Elimina el primer elemento del array.
+            <pre><code>let primeraFruta = frutas.shift(); // "Manzana"</code></pre>
+        </li>
+        <li>
+            <strong>unshift(elemento):</strong> Agrega un elemento al inicio del array.
+            <pre><code>frutas.unshift("Fresa"); // ["Fresa", "Banana", "Cereza"]</code></pre>
+        </li>
+        <li>
+            <strong>forEach(función):</strong> Ejecuta una función para cada elemento del array.
+            <pre><code>frutas.forEach(function(fruta) {<br>    console.log(fruta);<br>});</code></pre>
+        </li>
+        <li>
+            <strong>map(función):</strong> Crea un nuevo array con los resultados de la función aplicada a cada elemento.
+            <pre><code>let frutasEnMayusculas = frutas.map(function(fruta) {<br>    return fruta.toUpperCase();<br>}); // ["FRESA", "BANANA", "CEREZA"]</code></pre>
+        </li>
+    </ul>
+
+    <h2>Objetos</h2>
+
+    <h3>Definición</h3>
+    <p>
+        Un objeto es una colección de pares clave-valor. Cada clave debe ser única dentro del objeto.
+    </p>
+
+    <h3>Declaración y Creación</h3>
+    <ul>
+        <li>
+            Declaración de un objeto:
+            <pre><code>let persona = {<br>    nombre: "Juan",<br>    edad: 30,<br>    profesion: "Desarrollador"<br>};</code></pre>
+        </li>
+    </ul>
+
+    <h3>Acceso a Propiedades</h3>
+    <p>
+        Se accede a las propiedades de un objeto mediante la notación de punto o la notación de corchetes.
+    </p>
+    <pre><code>console.log(persona.nombre); // "Juan"<br>console.log(persona["edad"]); // 30</code></pre>
+
+    <h3>Adición y Modificación de Propiedades</h3>
+    <ul>
+        <li>
+            Adición de una nueva propiedad:
+            <pre><code>persona.nacionalidad = "Española";</code></pre>
+        </li>
+        <li>
+            Modificación de una propiedad existente:
+            <pre><code>persona.edad = 31;</code></pre>
+        </li>
+    </ul>
+
+    <h3>Eliminación de Propiedades</h3>
+    <pre><code>delete persona.profesion;</code></pre>
+
+    <h3>Métodos de Objetos</h3>
+    <p>
+        Los objetos pueden contener métodos, que son funciones asociadas a un objeto.
+    </p>
+    <pre><code>let persona = {<br>    nombre: "Juan",<br>    edad: 30,<br>    saludar: function() {<br>        console.log("Hola, soy " + this.nombre);<br>    }<br>};<br>persona.saludar(); // "Hola, soy Juan"</code></pre>
+
+    <h3>Iteración sobre Propiedades</h3>
+    <p>
+        Se puede iterar sobre las propiedades de un objeto utilizando un bucle <code>for...in</code>.
+    </p>
+    <pre><code>for (let clave in persona) {<br>    console.log(clave + ": " + persona[clave]);<br>}</code></pre>
+
+    <h2>Ejemplo Completo</h2>
+    <pre><code>// Arrays<br>let frutas = ["Manzana", "Banana", "Cereza"];<br>frutas.push("Durazno");<br>frutas.forEach(function(fruta) {<br>    console.log(fruta);<br>});<br><br>// Objetos<br>let persona = {<br>    nombre: "Juan",<br>    edad: 30,<br>    profesion: "Desarrollador",<br>    saludar: function() {<br>        console.log("Hola, soy " + this.nombre);<br>    }<br>};<br>persona.saludar();<br>for (let clave in persona) {<br>    console.log(clave + ": " + persona[clave]);<br>}</code></pre>
     <p class="codepen" data-height="1000" data-theme-id="dark" data-default-tab="js" data-slug-hash="jOooxGK" data-pen-title="Arrays y Objetos" data-user="GontxiPino" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
         <span>See the Pen <a href="https://codepen.io/GontxiPino/pen/jOooxGK">
         Arrays y Objetos</a> by Gonzalo Alfonso Pino Saavedra (<a href="https://codepen.io/GontxiPino">@GontxiPino</a>)
         on <a href="https://codepen.io">CodePen</a>.</span>
       </p>
       <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-    
+    <br>
 </body>
 </html>
