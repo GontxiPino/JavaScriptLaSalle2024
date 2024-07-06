@@ -93,9 +93,9 @@ nav ul li:hover {
 
 
 code {
-    background-color: #333; /* Gris oscuro */
+    background-color: #5f5f5f; /* Gris oscuro */
     color: #fff; /* Blanco */
-    padding: 10px; /* Espaciado interno para que no esté pegado a los bordes */
+    padding: 5px; /* Espaciado interno para que no esté pegado a los bordes */
     border-radius: 5px; /* Bordes redondeados para un aspecto moderno */
 }
 

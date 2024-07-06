@@ -1,100 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Stylo.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylo.css" />
     <title>Variables</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="Apuntes.html">Volver a los apuntes</a>
     <script src="variables.js"></script>
 
-    <br>
-
-    <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="js" data-slug-hash="OJYYZOj" data-pen-title="Variables" data-user="GontxiPino" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-        <span>See the Pen <a href="https://codepen.io/GontxiPino/pen/OJYYZOj">
-        Variables</a> by Gonzalo Alfonso Pino Saavedra (<a href="https://codepen.io/GontxiPino">@GontxiPino</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-      </p>
-      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-      <br>
-      <h1>Apuntes de Variables en JavaScript</h1>
+    <h1>Apuntes de Variables en JavaScript</h1>
 
     <h2>Definición</h2>
     <p>
-        En JavaScript, las variables se utilizan para almacenar datos. Se pueden declarar utilizando <code>var</code>, <code>let</code> y <code>const</code>.
+      En JavaScript, las variables se utilizan para almacenar datos. Se pueden
+      declarar utilizando <code>var</code>, <code>let</code> y
+      <code>const</code>.
     </p>
 
     <h2>Declaración de Variables</h2>
-    <p>
-        Las variables se pueden declarar de las siguientes maneras:
-    </p>
+    <p>Las variables se pueden declarar de las siguientes maneras:</p>
     <ul>
-        <li>
-            <strong>var:</strong> Declara una variable con alcance global o de función.
-            <pre><code>var nombre = "Juan";</code></pre>
-        </li>
-        <li>
-            <strong>let:</strong> Declara una variable con alcance de bloque.
-            <pre><code>let edad = 30;</code></pre>
-        </li>
-        <li>
-            <strong>const:</strong> Declara una constante con alcance de bloque. Su valor no puede cambiar.
-            <pre><code>const PI = 3.1416;</code></pre>
-        </li>
+      <li>
+        <strong>var:</strong> Declara una variable con alcance global o de
+        función.
+        <pre><code>var nombre = "Juan";</code></pre>
+      </li>
+      <li>
+        <strong>let:</strong> Declara una variable con alcance de bloque.
+        <pre><code>let edad = 30;</code></pre>
+      </li>
+      <li>
+        <strong>const:</strong> Declara una constante con alcance de bloque. Su
+        valor no puede cambiar.
+        <pre><code>const PI = 3.1416;</code></pre>
+      </li>
     </ul>
 
     <h2>Alcance de Variables</h2>
-    <p>
-        El alcance determina dónde se puede acceder a una variable:
-    </p>
+    <p>El alcance determina dónde se puede acceder a una variable:</p>
     <ul>
-        <li>
-            <strong>Global:</strong> Una variable declarada fuera de cualquier función tiene un alcance global y puede ser accedida desde cualquier parte del código.
-            <pre><code>var globalVar = "Soy global";<br>console.log(globalVar); // "Soy global"</code></pre>
-        </li>
-        <li>
-            <strong>De función:</strong> Una variable declarada dentro de una función solo puede ser accedida desde dentro de esa función.
-            <pre><code>function miFuncion() {<br>    var funcionVar = "Soy local de función";<br>    console.log(funcionVar); // "Soy local de función"<br>}<br>miFuncion();<br>// console.log(funcionVar); // Error: funcionVar is not defined</code></pre>
-        </li>
-        <li>
-            <strong>De bloque:</strong> Una variable declarada con <code>let</code> o <code>const</code> dentro de un bloque solo puede ser accedida desde dentro de ese bloque.
-            <pre><code>if (true) {<br>    let bloqueVar = "Soy local de bloque";<br>    console.log(bloqueVar); // "Soy local de bloque"<br>}<br>// console.log(bloqueVar); // Error: bloqueVar is not defined</code></pre>
-        </li>
+      <li>
+        <strong>Global:</strong> Una variable declarada fuera de cualquier
+        función tiene un alcance global y puede ser accedida desde cualquier
+        parte del código.
+        <pre><code>var globalVar = "Soy global";<br>console.log(globalVar); // "Soy global"</code></pre>
+      </li>
+      <li>
+        <strong>De función:</strong> Una variable declarada dentro de una
+        función solo puede ser accedida desde dentro de esa función.
+        <pre><code>function miFuncion() {<br>    var funcionVar = "Soy local de función";<br>    console.log(funcionVar); // "Soy local de función"<br>}<br>miFuncion();<br>// console.log(funcionVar); // Error: funcionVar is not defined</code></pre>
+      </li>
+      <li>
+        <strong>De bloque:</strong> Una variable declarada con
+        <code>let</code> o <code>const</code> dentro de un bloque solo puede ser
+        accedida desde dentro de ese bloque.
+        <pre><code>if (true) {<br>    let bloqueVar = "Soy local de bloque";<br>    console.log(bloqueVar); // "Soy local de bloque"<br>}<br>// console.log(bloqueVar); // Error: bloqueVar is not defined</code></pre>
+      </li>
     </ul>
 
     <h2>Hoisting</h2>
     <p>
-        El <em>hoisting</em> es un comportamiento en JavaScript en el que las declaraciones de variables y funciones se mueven al inicio de su contexto de ejecución.
+      El <em>hoisting</em> es un comportamiento en JavaScript en el que las
+      declaraciones de variables y funciones se mueven al inicio de su contexto
+      de ejecución.
     </p>
     <ul>
-        <li>
-            Las variables declaradas con <code>var</code> se inicializan como <code>undefined</code> al principio del contexto de ejecución.
-            <pre><code>console.log(hoistedVar); // undefined<br>var hoistedVar = "Soy hoisted";</code></pre>
-        </li>
-        <li>
-            Las variables declaradas con <code>let</code> y <code>const</code> no se inicializan hasta que su declaración es evaluada en tiempo de ejecución.
-            <pre><code>// console.log(noHoistedLet); // Error: noHoistedLet is not defined<br>let noHoistedLet = "No soy hoisted";</code></pre>
-        </li>
+      <li>
+        Las variables declaradas con <code>var</code> se inicializan como
+        <code>undefined</code> al principio del contexto de ejecución.
+        <pre><code>console.log(hoistedVar); // undefined<br>var hoistedVar = "Soy hoisted";</code></pre>
+      </li>
+      <li>
+        Las variables declaradas con <code>let</code> y <code>const</code> no se
+        inicializan hasta que su declaración es evaluada en tiempo de ejecución.
+        <pre><code>// console.log(noHoistedLet); // Error: noHoistedLet is not defined<br>let noHoistedLet = "No soy hoisted";</code></pre>
+      </li>
     </ul>
 
     <h2>Buenas Prácticas</h2>
     <ul>
-        <li>
-            Utiliza <code>let</code> y <code>const</code> en lugar de <code>var</code> para evitar errores relacionados con el alcance y el hoisting.
-        </li>
-        <li>
-            Declara todas las variables al principio de su contexto de ejecución.
-        </li>
-        <li>
-            Utiliza nombres de variables descriptivos y en camelCase.
-            <pre><code>let nombreUsuario = "Juan";<br>const MAX_INTENTOS = 3;</code></pre>
-        </li>
+      <li>
+        Utiliza <code>let</code> y <code>const</code> en lugar de
+        <code>var</code> para evitar errores relacionados con el alcance y el
+        hoisting.
+      </li>
+      <li>
+        Declara todas las variables al principio de su contexto de ejecución.
+      </li>
+      <li>
+        Utiliza nombres de variables descriptivos y en camelCase.
+        <pre><code>let nombreUsuario = "Juan";<br>const MAX_INTENTOS = 3;</code></pre>
+      </li>
     </ul>
 
     <h2>Ejemplo Completo</h2>
     <pre><code>function ejemploVariables() {<br>    var globalVar = "Soy global";<br>    let bloqueVar = "Soy local de bloque";<br>    const CONSTANTE = "No cambio";<br><br>    if (true) {<br>        let otraBloqueVar = "Otra local de bloque";<br>        console.log(otraBloqueVar); // "Otra local de bloque"<br>    }<br><br>    console.log(globalVar); // "Soy global"<br>    console.log(bloqueVar); // "Soy local de bloque"<br>    console.log(CONSTANTE); // "No cambio"<br><br>    // console.log(otraBloqueVar); // Error: otraBloqueVar is not defined<br>}<br>ejemploVariables();</code></pre>
+    <br />
 
-</body>
+    <p
+      class="codepen"
+      data-height="300"
+      data-theme-id="dark"
+      data-default-tab="js"
+      data-slug-hash="OJYYZOj"
+      data-pen-title="Variables"
+      data-user="GontxiPino"
+      style="
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;
+      "
+    >
+      <span
+        >See the Pen
+        <a href="https://codepen.io/GontxiPino/pen/OJYYZOj"> Variables</a> by
+        Gonzalo Alfonso Pino Saavedra (<a href="https://codepen.io/GontxiPino"
+          >@GontxiPino</a
+        >) on <a href="https://codepen.io">CodePen</a>.</span
+      >
+    </p>
+    <script
+      async
+      src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+    ></script>
+    <br />
+  </body>
 </html>
