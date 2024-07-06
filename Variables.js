@@ -35,7 +35,7 @@ console.log("Edad: " + userAge, "\nAños de experiencia: " + userExperience);
 
 // ESPACIO = "-";
 
-// TODO: arrays, objects
+
 
 a = 1;
 b = 2;
