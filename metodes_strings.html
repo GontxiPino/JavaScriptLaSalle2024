@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylo.css" />
+    <title>Metodes Strings</title>
+  </head>
+  <body>
+    <script src="metodes.js"></script>
+    <a href="Apuntes.html">Volver a los apuntes</a>
+
+    
+      
+
+    <br />
+    <h1>Apuntes de Métodos de Strings en JavaScript</h1>
+
+    <h2>Métodos Comunes de Strings</h2>
+    
+    <h3>charAt()</h3>
+    <p>
+        Devuelve el carácter en el índice especificado.
+    </p>
+    <pre><code>let texto = "JavaScript";
+let caracter = texto.charAt(2);
+console.log(caracter); // "v"</code></pre>
+
+    <h3>charCodeAt()</h3>
+    <p>
+        Devuelve el código Unicode del carácter en el índice especificado.
+    </p>
+    <pre><code>let codigo = texto.charCodeAt(2);
+console.log(codigo); // 118</code></pre>
+
+    <h3>concat()</h3>
+    <p>
+        Combina el texto de dos (o más) strings y devuelve una nueva string.
+    </p>
+    <pre><code>let nuevaCadena = texto.concat(" es genial");
+console.log(nuevaCadena); // "JavaScript es genial"</code></pre>
+
+    <h3>includes()</h3>
+    <p>
+        Determina si una string contiene los caracteres de una string especificada.
+    </p>
+    <pre><code>let contiene = texto.includes("Script");
+console.log(contiene); // true</code></pre>
+
+    <h3>indexOf()</h3>
+    <p>
+        Devuelve el índice dentro de la string de la primera aparición del valor especificado, o -1 si no se encuentra.
+    </p>
+    <pre><code>let indice = texto.indexOf("Script");
+console.log(indice); // 4</code></pre>
+
+    <h3>lastIndexOf()</h3>
+    <p>
+        Devuelve el índice dentro de la string de la última aparición del valor especificado, o -1 si no se encuentra.
+    </p>
+    <pre><code>let ultimaPosicion = texto.lastIndexOf("a");
+console.log(ultimaPosicion); // 3</code></pre>
+
+    <h3>slice()</h3>
+    <p>
+        Extrae una sección de una string y devuelve una string nueva.
+    </p>
+    <pre><code>let seccion = texto.slice(0, 4);
+console.log(seccion); // "Java"</code></pre>
+
+    <h3>split()</h3>
+    <p>
+        Divide un objeto de tipo String en un array de strings mediante la separación de la string en sub-strings.
+    </p>
+    <pre><code>let palabras = texto.split("a");
+console.log(palabras); // ["J", "v", "Script"]</code></pre>
+
+    <h3>substring()</h3>
+    <p>
+        Devuelve los caracteres de una string entre dos índices especificados.
+    </p>
+    <pre><code>let subcadena = texto.substring(4, 10);
+console.log(subcadena); // "Script"</code></pre>
+
+    <h3>toLowerCase()</h3>
+    <p>
+        Convierte una string en minúsculas.
+    </p>
+    <pre><code>let minusculas = texto.toLowerCase();
+console.log(minusculas); // "javascript"</code></pre>
+
+    <h3>toUpperCase()</h3>
+    <p>
+        Convierte una string en mayúsculas.
+    </p>
+    <pre><code>let mayusculas = texto.toUpperCase();
+console.log(mayusculas); // "JAVASCRIPT"</code></pre>
+
+    <h3>trim()</h3>
+    <p>
+        Elimina los espacios en blanco en ambos extremos de la string.
+    </p>
+    <pre><code>let textoConEspacios = "   JavaScript   ";
+let textoSinEspacios = textoConEspacios.trim();
+console.log(textoSinEspacios); // "JavaScript"</code></pre>
+
+    <h3>replace()</h3>
+    <p>
+        Reemplaza una subcadena dentro de una string con otra subcadena.
+    </p>
+    <pre><code>let nuevaCadena = texto.replace("Java", "Type");
+console.log(nuevaCadena); // "TypeScript"</code></pre>
+
+    <h3>startsWith()</h3>
+    <p>
+        Determina si una string comienza con los caracteres de otra string.
+    </p>
+    <pre><code>let empiezaCon = texto.startsWith("Java");
+console.log(empiezaCon); // true</code></pre>
+
+    <h3>endsWith()</h3>
+    <p>
+        Determina si una string termina con los caracteres de otra string.
+    </p>
+    <pre><code>let terminaCon = texto.endsWith("Script");
+console.log(terminaCon); // true</code></pre>
+
+    <h2>Ejemplo Completo</h2>
+    <pre><code>let texto = "JavaScript";
+console.log(texto.charAt(2)); // "v"
+console.log(texto.charCodeAt(2)); // 118
+console.log(texto.concat(" es genial")); // "JavaScript es genial"
+console.log(texto.includes("Script")); // true
+console.log(texto.indexOf("Script")); // 4
+console.log(texto.lastIndexOf("a")); // 3
+console.log(texto.slice(0, 4)); // "Java"
+console.log(texto.split("a")); // ["J", "v", "Script"]
+console.log(texto.substring(4, 10)); // "Script"
+console.log(texto.toLowerCase()); // "javascript"
+console.log(texto.toUpperCase()); // "JAVASCRIPT"
+console.log(texto.trim()); // "JavaScript"
+console.log(texto.replace("Java", "Type")); // "TypeScript"
+console.log(texto.startsWith("Java")); // true
+console.log(texto.endsWith("Script")); // true</code></pre>
+    
+    <span
+    >See the Pen
+    <a href="https://codepen.io/GontxiPino/pen/vYqBwZG"> Metodos</a> by
+    Gonzalo Alfonso Pino Saavedra (<a href="https://codepen.io/GontxiPino"
+      >@GontxiPino</a
+    >) on <a href="https://codepen.io">CodePen</a>.</span
+  >
+</p>
+<script
+  async
+  src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+></script>
+  </body>
+
+</html>
