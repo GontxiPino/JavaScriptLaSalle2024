@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Stylo.css" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <a href="Apuntes.html">Volver a los apuntes</a>
+    <script src="funciones.js"></script>
+
+<body>
+
+    <h1>Apuntes de Funciones en JavaScript</h1>
+
+    <h2>Definición de Funciones</h2>
+    <p>
+        Las funciones en JavaScript son bloques de código diseñados para realizar una tarea específica. Se ejecutan cuando algo las invoca (las llama).
+    </p>
+
+    <h2>Declaración de Funciones</h2>
+    <p>
+        Una función se declara con la palabra clave <code>function</code>, seguida de un nombre, paréntesis y un bloque de código entre llaves.
+    </p>
+    <pre><code>function saludar() {
+    console.log("Hola, Mundo!");
+}
+saludar(); // Llama a la función</code></pre>
+
+    <h2>Funciones con Parámetros</h2>
+    <p>
+        Las funciones pueden tomar parámetros, que son valores que se pasan a la función cuando se invoca.
+    </p>
+    <pre><code>function saludar(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+saludar("Juan"); // "Hola, Juan!"</code></pre>
+
+    <h2>Funciones con Valores de Retorno</h2>
+    <p>
+        Las funciones pueden devolver valores utilizando la palabra clave <code>return</code>.
+    </p>
+    <pre><code>function sumar(a, b) {
+    return a + b;
+}
+let resultado = sumar(5, 3);
+console.log(resultado); // 8</code></pre>
+
+    <h2>Funciones Anónimas</h2>
+    <p>
+        Las funciones anónimas son funciones sin nombre. A menudo se asignan a una variable o se usan como argumentos para otras funciones.
+    </p>
+    <pre><code>let saludar = function() {
+    console.log("Hola, Mundo!");
+};
+saludar(); // "Hola, Mundo!"</code></pre>
+
+    <h2>Funciones Flecha</h2>
+    <p>
+        Las funciones flecha son una forma más concisa de escribir funciones anónimas introducidas en ES6.
+    </p>
+    <pre><code>let saludar = () => {
+    console.log("Hola, Mundo!");
+};
+saludar(); // "Hola, Mundo!"
+
+let sumar = (a, b) => a + b;
+let resultado = sumar(5, 3);
+console.log(resultado); // 8</code></pre>
+
+    <h2>Funciones como Objetos de Primera Clase</h2>
+    <p>
+        En JavaScript, las funciones son objetos de primera clase, lo que significa que pueden ser asignadas a variables, pasadas como argumentos a otras funciones y devueltas por otras funciones.
+    </p>
+    <pre><code>function operacion(a, b, func) {
+    return func(a, b);
+}
+
+let resultado = operacion(5, 3, (x, y) => x * y);
+console.log(resultado); // 15</code></pre>
+
+    <h2>Funciones Recursivas</h2>
+    <p>
+        Una función recursiva es una función que se llama a sí misma.
+    </p>
+    <pre><code>function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n + factorial(n - 1);
+    }
+}
+let resultado = factorial(5);
+console.log(resultado); // 15</code></pre>
+
+    <h2>Funciones de Orden Superior</h2>
+    <p>
+        Las funciones de orden superior son funciones que pueden tomar otras funciones como argumentos y/o devolverlas como resultado.
+    </p>
+    <pre><code>function aplicarOperacion(a, b, operacion) {
+    return operacion(a, b);
+}
+
+let suma = (a, b) => a + b;
+let multiplicacion = (a, b) => a * b;
+
+console.log(aplicarOperacion(5, 3, suma)); // 8
+console.log(aplicarOperacion(5, 3, multiplicacion)); // 15</code></pre>
+
+    <h2>Ejemplo Completo</h2>
+    <pre><code>// Declaración de función
+function saludar(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+saludar("Juan"); // "Hola, Juan!"
+
+// Función con valor de retorno
+function sumar(a, b) {
+    return a + b;
+}
+let resultado = sumar(5, 3);
+console.log(resultado); // 8
+
+// Función anónima
+let multiplicar = function(a, b) {
+    return a * b;
+};
+console.log(multiplicar(4, 5)); // 20
+
+// Función flecha
+let dividir = (a, b) => a / b;
+console.log(dividir(10, 2)); // 5
+
+// Función de orden superior
+function aplicarOperacion(a, b, operacion) {
+    return operacion(a, b);
+}
+console.log(aplicarOperacion(5, 3, (x, y) => x - y)); // 2
+
+// Función recursiva
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+console.log(factorial(5)); // 120</code></pre>
+    
+</body>
+</html>
